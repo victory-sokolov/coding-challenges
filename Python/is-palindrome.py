@@ -11,3 +11,17 @@ def is_palindrome(x: int) -> bool:
     if original == reversed:
         return True
     return False
+
+
+# Two Pointers approach
+def is_palindrome_str(string: str) -> bool:
+    start = 0
+    end = len(string) - 1
+
+    while start < end:
+        if string[start] != string[end]:
+            return False
+        start += 1
+        end -= 1
+
+    return True
